@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
-        // Inicializar EmailJS con tu User ID (Public Key)
         (function() {
             emailjs.init("DvkQr9T-CzO1LF4kv");
         })();
@@ -49,7 +48,6 @@
             padding: 80px 0;
         }
         
-        /* Header Styles */
         header {
             background-color: rgba(255, 255, 255, 0.95);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -117,7 +115,6 @@
             width: 100%;
         }
         
-        /* Hero Section */
         .hero {
             height: 100vh;
             display: flex;
@@ -194,7 +191,6 @@
             color: white;
         }
         
-        /* Section Titles */
         .section-title {
             text-align: center;
             margin-bottom: 60px;
@@ -222,7 +218,6 @@
             border-radius: 2px;
         }
         
-        /* About Section */
         .about-content {
             display: flex;
             gap: 50px;
@@ -288,7 +283,6 @@
             font-weight: 500;
         }
         
-        /* Timeline for Education and Experience */
         .timeline {
             position: relative;
             max-width: 800px;
@@ -361,7 +355,81 @@
             margin-bottom: 10px;
         }
         
-        /* Certificates Section */
+        .projects {
+            background-color: #f0f7ff;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 15px 20px;
+            position: relative;
+        }
+        
+        .project-header h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            padding-right: 40px;
+        }
+        
+        .project-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+        }
+        
+        .project-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-description {
+            margin-bottom: 15px;
+            font-size: 14px;
+            flex-grow: 1;
+        }
+        
+        .project-link {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .project-link:hover {
+            background-color: var(--accent);
+        }
+        
         .certificates-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -374,6 +442,9 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         
         .certificate-card:hover {
@@ -390,6 +461,7 @@
         .certificate-header h3 {
             font-size: 18px;
             margin-bottom: 5px;
+            line-height: 1.4;
         }
         
         .certificate-header .date {
@@ -399,11 +471,15 @@
         
         .certificate-body {
             padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .certificate-body p {
             margin-bottom: 15px;
             font-size: 14px;
+            flex-grow: 1;
         }
         
         .issuer {
@@ -418,9 +494,36 @@
             font-size: 24px;
             color: var(--primary);
             margin-right: 10px;
+            min-width: 24px;
         }
         
-        /* Contact Section */
+        .certificate-actions {
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .view-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: var(--transition);
+            font-weight: 500;
+            border: 2px solid var(--primary);
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
+        }
+        
+        .view-btn:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(14, 165, 233, 0.2);
+        }
+        
+        
         .contact {
             background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(14, 165, 233, 0.02) 100%);
         }
@@ -498,7 +601,6 @@
             resize: vertical;
         }
         
-        /* Alert Messages */
         .alert {
             padding: 15px;
             margin-bottom: 20px;
@@ -518,12 +620,20 @@
             border: 1px solid #f5c6cb;
         }
         
-        /* Footer */
         footer {
             background-color: var(--secondary);
             color: white;
             padding: 40px 0 20px;
             text-align: center;
+        }
+        
+        .contact-footer {
+            margin-bottom: 25px;
+        }
+        
+        .contact-footer h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
         }
         
         .social-links {
@@ -537,25 +647,28 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             background-color: rgba(255, 255, 255, 0.1);
             color: white;
             border-radius: 50%;
             transition: var(--transition);
+            font-size: 20px;
         }
         
         .social-links a:hover {
             background-color: var(--primary);
-            transform: translateY(-3px);
+            transform: translateY(-5px);
         }
         
         .copyright {
             font-size: 14px;
             opacity: 0.7;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
         }
         
-        /* Loading spinner */
         .spinner {
             display: none;
             border: 4px solid rgba(0, 0, 0, 0.1);
@@ -571,7 +684,6 @@
             to { transform: rotate(360deg); }
         }
         
-        /* Responsive Design */
         @media (max-width: 992px) {
             .about-content {
                 flex-direction: column;
@@ -656,7 +768,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container header-content">
             <div class="logo">JOSHUA<span>LOPEZ</span></div>
@@ -666,6 +777,7 @@
                     <li><a href="#about">Sobre Mí</a></li>
                     <li><a href="#education">Educación</a></li>
                     <li><a href="#experience">Experiencia</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
                     <li><a href="#certificates">Certificados</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
@@ -673,7 +785,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-content">
             <div>
@@ -681,13 +792,12 @@
                 <p>Estudiante de Ingeniería en Sistemas con experiencia en desarrollo web, ciberseguridad y bases de datos. Busco oportunidades para aplicar mis habilidades y contribuir al éxito de proyectos innovadores.</p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn">Contáctame</a>
-                    <a href="#certificates" class="btn btn-outline">Ver Certificados</a>
+                    <a href="#projects" class="btn btn-outline">Ver Proyectos</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-title">
@@ -704,7 +814,7 @@
                                 <span class="skill">Adaptabilidad</span>
                                 <span class="skill">Responsable</span>
                                 <span class="skill">Disciplina</span>
-                                <span class="skill">Arte y moda</span>
+                                <span class="skill">Resolución de problemas</span>
                                 <span class="skill">Trabajo en equipo</span>
                             </div>
                         </div>
@@ -725,8 +835,13 @@
                                 <span class="skill">Kali Linux</span>
                                 <span class="skill">Ubuntu Server</span>
                                 <span class="skill">MySQL</span>
+                                <span class="skill">PhPMyAdmin</span>
+                                <span class="skill">SSMS</span>
                                 <span class="skill">XAMPP</span>
                                 <span class="skill">Oracle</span>
+                                <span class="skill">Paquete de Office</span>
+                                <span class="skill">Knime</span>
+                                <span class="skill">Power BI</span>                            
                                 <span class="skill">Packet Tracer</span>
                             </div>
                         </div>
@@ -741,7 +856,6 @@
         </div>
     </section>
 
-    <!-- Education Section -->
     <section id="education" class="education">
         <div class="container">
             <div class="section-title">
@@ -769,7 +883,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-title">
@@ -780,7 +893,7 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <h3 class="timeline-title">Desarrollo de Software</h3>
-                        <p>Amplio conocimiento en programación con Java, desarrollo web con Visual Studio Code, y desarrollo de aplicaciones móviles.</p>
+                        <p>Amplio conocimiento en programación con Java, desarrollo web con Visual Studio Code utilizando PHP, APIS BackEnd, FrontEnd y desarrollo de aplicaciones móviles.</p>
                         <p>Especializado en creación de páginas web y desarrollo de videojuegos con Visual Studio.</p>
                     </div>
                 </div>
@@ -788,7 +901,14 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <h3 class="timeline-title">Ciberseguridad</h3>
-                        <p>Experiencia trabajando con Kali Linux y otras distribuciones de Linux en el área de seguridad informática.</p>
+                        <p>Experiencia trabajando con Kali Linux y otras distribuciones de Linux en el área de seguridad informática.</p>                       
+                    </div>
+                </div>
+
+                 <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Redes</h3>
+                        <p>Experiencia trabajando en proyectos topologicos, switches, conexiones monitoreo de red y liberacion de trafico con Wireshark.</p>
                         <p>Conocimientos en redes y uso de Packet Tracer de Cisco para simulaciones de redes.</p>
                     </div>
                 </div>
@@ -803,7 +923,172 @@
         </div>
     </section>
 
-    <!-- Certificates Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Proyectos Realizados</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Zombie Protocol</h3>
+                        <div class="project-icon">
+                            <i class="fas fa-skull"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">Juego de supervivencia zombie desarrollado con Unity y C#.</p>
+                        <a href="https://github.com/Diego2452/ZOMBIE-PROTOCOL.git" target="_blank" class="project-link">Ver en GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Sistema de Gestión</h3>
+                        <div class="project-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">Sistema de gestión para cursos universitarios desarrollado en equipo.</p>
+                        <a href="https://github.com/Chechogit/sc502-1c2025-grupo5.git" target="_blank" class="project-link">Ver en GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Tienda Virtual</h3>
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">Plataforma de e-commerce completa con carrito de compras.</p>
+                        <a href="https://github.com/Josh181i/tienda_vt.git" target="_blank" class="project-link">Ver en GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Techtonic</h3>
+                        <div class="project-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">Sitio web para empresa de tecnología con catálogo de productos.</p>
+                        <a href="https://github.com/Josh181i/Techtonic.git" target="_blank" class="project-link">Ver en GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Sistema de Taller</h3>
+                        <div class="project-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">Sistema para gestión de citas y servicios de taller mecánico.</p>
+                        <a href="https://github.com/Josh181i/registro-de-taller.git" target="_blank" class="project-link">Ver en GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Restaurante</h3>
+                        <div class="project-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">Sitio web para restaurante con menú interactivo y reservas.</p>
+                        <a href="https://github.com/Josh181i/pagina-webb-de-recta-de-comida.git" target="_blank" class="project-link">Ver en GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Peluquería</h3>
+                        <div class="project-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">Página web para peluquería con sistema de citas online.</p>
+                        <a href="https://github.com/Josh181i/pagina-webb-de-peluqueria.git" target="_blank" class="project-link">Ver en GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Diccionario Inglés</h3>
+                        <div class="project-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">Diccionario interactivo inglés-español con funcionalidad de búsqueda.</p>
+                        <a href="https://github.com/Josh181i/pagina-webb-diciconario-en-ingles.git" target="_blank" class="project-link">Ver en GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Reservas Municipales</h3>
+                        <div class="project-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">Sistema de reservas para instalaciones municipales.</p>
+                        <a href="https://github.com/Josh181i/pagina-web-para-reservas-municipales.git" target="_blank" class="project-link">Ver en GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Registro de Notas</h3>
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">Sistema para registro y seguimiento de notas escolares.</p>
+                        <a href="https://github.com/Josh181i/pagina-web-registro-de-notas-para-escuela-.git" target="_blank" class="project-link">Ver en GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>CRUD de Base de Datos</h3>
+                        <div class="project-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">Operaciones CRUD completas con diferentes tecnologías de bases de datos.</p>
+                        <a href="https://github.com/Josh181i/BD-operaciones-crud.git" target="_blank" class="project-link">Ver en GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Portafolio Profesional</h3>
+                        <div class="project-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">Este mismo portafolio profesional desarrollado con HTML, CSS y JavaScript.</p>
+                        <a href="https://github.com/Josh181i/portafolio.github.io.git" target="_blank" class="project-link">Ver en GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="certificates" class="certificates">
         <div class="container">
             <div class="section-title">
@@ -820,11 +1105,14 @@
                         <p>Configuración de routers, switches y dispositivos finales para acceso a recursos de red locales y remotos.</p>
                         <p>Habilitación de conectividad integral entre dispositivos remotos.</p>
                         <div class="issuer">
-                            <i class="fas fa-university"></i>
+                            <i class="fas fa-network-wired"></i>
                             <div>
                                 <p><strong>Cisco Networking Academy</strong></p>
                                 <p>Universidad Fidelitas</p>
                             </div>
+                        </div>
+                        <div class="certificate-actions">
+                            <a href="file:///C:/Users/sasuk/Downloads/CCNA-_Introduction_to_Networks_certificate_sasukeuchihareloadead-gmail-com_9da52134-5ae2-4d3e-9793-b6ad2f0d8e1e.pdf" target="_blank" class="view-btn">Ver certificado</a>
                         </div>
                     </div>
                 </div>
@@ -842,6 +1130,9 @@
                             <div>
                                 <p><strong>Cisco Networking Academy</strong></p>
                             </div>
+                        </div>
+                        <div class="certificate-actions">
+                            <a href="file:///C:/Users/sasuk/Downloads/Introduction_to_IoT_certificate_sasukeuchihareloadead-gmail-com_b1fd00c2-a420-462c-abcb-d1eeb9ef7a51.pdf" target="_blank" class="view-btn">Ver certificado</a>
                         </div>
                     </div>
                 </div>
@@ -861,6 +1152,9 @@
                                 <p><strong>Universal Robots Academy</strong></p>
                             </div>
                         </div>
+                        <div class="certificate-actions">
+                            <a href="https://ufidelitas-my.sharepoint.com/personal/jlopez40530_ufide_ac_cr/Documents/certificado%20robots.pdf" target="_blank" class="view-btn">Ver certificado</a>
+                        </div>
                     </div>
                 </div>
                 
@@ -877,6 +1171,9 @@
                                 <p><strong>FideVirtual</strong></p>
                             </div>
                         </div>
+                        <div class="certificate-actions">
+                            <a href="file:///C:/Users/sasuk/Desktop/U/Certificado_Aprovechamiento_Excel_Basico.pdf" target="_blank" class="view-btn">Ver certificado</a>
+                        </div>
                     </div>
                 </div>
                 
@@ -892,6 +1189,28 @@
                             <div>
                                 <p><strong>Cisco Networking Academy</strong></p>
                             </div>
+                        </div>
+                        <div class="certificate-actions">
+                            <a href="file:///C:/Users/sasuk/Desktop/_certificate_sasukeuchihareloadead-gmail-com_be99bff8-4b5c-408a-99c8-60d842a1485a.pdf" target="_blank" class="view-btn">Ver certificado</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <h3>Fundamentos de Conmutación, Enrutamiento y Redes Inalámbricas</h3>
+                        <span class="date">29/05/2025</span>
+                    </div>
+                    <div class="certificate-body">
+                        <p>Especialización fundamental en redes.</p>
+                        <div class="issuer">
+                            <i class="fas fa-server"></i>
+                            <div>
+                                <p><strong>Cisco Networking Academy</strong></p>
+                            </div>
+                        </div>
+                        <div class="certificate-actions">
+                            <a href="file:///C:/Users/sasuk/Downloads/CCNA-_Switching-_Routing-_and_Wireless_Essentials_certificate_sasukeuchihareloadead-gmail-com_6518dfb0-32f0-45f4-ae03-fef17004312d.pdf" target="_blank" class="view-btn">Ver certificado</a>
                         </div>
                     </div>
                 </div>
@@ -910,13 +1229,78 @@
                                 <p>Universidad Fidelitas</p>
                             </div>
                         </div>
+                        <div class="certificate-actions">
+                            <a href="file:///C:/Users/sasuk/Desktop/_certificate_sasukeuchihareloadead-gmail-com_7967cfb6-1a0f-43dd-a212-3a40e563f183.pdf" target="_blank" class="view-btn">Ver certificado</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <h3>Scrum Fundamentals Certified</h3>
+                        <span class="date">21/06/2024</span>
+                    </div>
+                    <div class="certificate-body">
+                        <p>Certificación otorgada por comprensión de fundamentos y principios del marco de trabajo Scrum.</p>
+                        <p>Incluye conocimientos en roles, eventos y artefactos de Scrum para gestión ágil de proyectos.</p>
+                        <div class="issuer">
+                            <i class="fas fa-tasks"></i>
+                            <div>
+                                <p><strong>SCRUMstudy</strong></p>
+                                <p>Certification ID: 1037441</p>
+                            </div>
+                        </div>
+                        <div class="certificate-actions">
+                            <a href="file:///C:/Users/sasuk/Desktop/ScrumFundamentalsCertified-JoshLopez-1037441.pdf" target="_blank" class="view-btn">Ver certificado</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <h3>Six Sigma Yellow Belt</h3>
+                        <span class="date">Fecha por definir</span>
+                    </div>
+                    <div class="certificate-body">
+                        <p>Certificación básica de Six Sigma enfocada en la mejora de procesos y reducción de variaciones.</p>
+                        <p>Incluye fundamentos de DMAIC y colaboración en proyectos de mejora continua.</p>
+                        <div class="issuer">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <p><strong>Six Sigma Institute</strong></p>
+                                <p>Organización de certificación reconocida</p>
+                            </div>
+                        </div>
+                        <div class="certificate-actions">
+                            <a href="file:///C:/Users/sasuk/Desktop/SixSigmaYellowBelt-JoshLopez-892113.pdf" target="_blank" class="view-btn">Ver certificado</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <h3>Digital Marketing Fundamentals</h3>
+                        <span class="date">Fecha por definir</span>
+                    </div>
+                    <div class="certificate-body">
+                        <p>Fundamentos del marketing digital, incluyendo SEO, SEM, redes sociales, email marketing y analítica.</p>
+                        <p>Desarrollo de estrategias digitales efectivas y conocimiento de herramientas clave.</p>
+                        <div class="issuer">
+                            <i class="fas fa-bullhorn"></i>
+                            <div>
+                                <p><strong>Google Digital Garage</strong></p>
+                                <p>Certificación de nivel introductorio</p>
+                            </div>
+                        </div>
+                        <div class="certificate-actions">
+                            <a href="file:///C:/Users/sasuk/Desktop/DigitalMarketingFundamentals-JoshLopez-611209.pdf" target="_blank" class="view-btn">Ver certificado</a>
+                        </div>
+                    </div>
+                </div>
+           
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-title">
@@ -949,7 +1333,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
                                 <h4>Dirección</h4>
-                                <p>100 este y 50 sur de filtros, JSM</p>
+                                <p>100 este y 50 sur de filtros, JSM, Buenos Aires Puntarenas</p>
                             </div>
                         </div>
                     </div>
@@ -987,21 +1371,30 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+            <div class="contact-footer">
+                <h3>¡Contáctame por aquí también!</h3>
+                <p>Puedes encontrarme en las siguientes plataformas:</p>
             </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/Josh181i" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://wa.me/50685494388?text=Hola,%20me%20interesa%20más%20información" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/thee_josh_?igsh=NnByc3psOW4yOWpq&utm_source=qr" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            
             <p class="copyright">© 2025 Joshua Lopez. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1012,7 +1405,6 @@
             });
         });
         
-        // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
@@ -1024,7 +1416,6 @@
             }
         });
         
-        // Form submission with EmailJS
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -1035,23 +1426,19 @@
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
             
-            // Validación básica
             if (!name || !email || !subject || !message) {
                 showAlert('Por favor completa todos los campos', 'error');
                 return;
             }
             
-            // Validar email
             if (!isValidEmail(email)) {
                 showAlert('Por favor ingresa un email válido', 'error');
                 return;
             }
             
-            // Mostrar spinner y ocultar alertas
             spinner.style.display = 'block';
             alertBox.style.display = 'none';
             
-            // Enviar correo con EmailJS
             emailjs.send("service_lhi6zid", "template_eesy2nr", {
                 from_name: name,
                 reply_to: email,
@@ -1069,7 +1456,6 @@
             });
         });
         
-        // Función para mostrar alertas
         function showAlert(message, type) {
             const alertBox = document.getElementById('alert');
             alertBox.textContent = message;
@@ -1083,13 +1469,11 @@
             
             alertBox.style.display = 'block';
             
-            // Ocultar alerta después de 5 segundos
             setTimeout(() => {
                 alertBox.style.display = 'none';
             }, 5000);
         }
         
-        // Función para validar email
         function isValidEmail(email) {
             const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(String(email).toLowerCase());
